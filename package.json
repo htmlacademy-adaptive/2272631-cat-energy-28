@@ -1,25 +1,48 @@
 {
-  "name": "cat-energy-28",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.4.13",
+    "browser-sync": "2.29.1",
+    "cross-env": "7.0.3",
+    "cssnano": "5.1.14",
+    "gulp": "4.0.2",
+    "gulp-dart-sass": "1.0.2",
+    "gulp-data": "1.3.1",
+    "gulp-include": "2.4.1",
+    "gulp-lintspaces": "1.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-posthtml": "3.0.5",
+    "gulp-twig": "1.2.0",
+    "htmlnano": "2.0.3",
+    "postcss-reporter": "7.0.5",
+    "postcss-scss": "4.0.6",
+    "posthtml-bem-linter": "0.1.3",
+    "posthtml-w3c-validator": "1.1.0",
+    "pre-commit": "1.2.2",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.11"
+    "stylelint-config-htmlacademy": "^0.1.11",
+    "svgo": "2.8.0",
+    "terser": "5.16.0"
   },
   "scripts": {
+    "dev": "npm start",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "lint": "npm run editorconfig",
-    "build": "echo 'Build task'",
-    "start": "echo 'Start task'"
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "lint": "cross-env NODE_ENV=\"production\" gulp lint",
+    "build": "cross-env NODE_ENV=\"production\" gulp build",
+    "start": "cross-env NODE_ENV=\"development\" gulp"
   },
   "editorconfig-cli": [
-    "*.json",
-    "source/*.html"
+    "*.{js,json}",
+    "source/**/*.{twig,js,scss,svg}"
   ],
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "pre-commit": [
+    "lint"
+  ]
 }
