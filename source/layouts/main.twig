@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Кэт энерджи :
+			{% block title %}{% endblock %}
+		</title>
+	</head>
+
+	<!--Разметка шапки с навигацией-->
+
+	<body class="page__body">
+		<header class="main-header">
+			<a class="main-header__logo-image logo-image" href="index.html">
+				<img class="logo-image__image" src="img/content/logo-mobile.svg" width="33" height="37" alt="Картинка логотипа магазина «Кэт энерджи».">
+			</a>
+			<a class="main-header__logo-text logo-text" href="index.html">
+				<img class="logo-text__image" src="img/content/logo-text-mobile.svg" width="101" height="18" alt="Текстовый логотип магазина «Кэт энерджи».">
+			</a>
+			<button class="main-header__toggle" type="button">
+				<span class="visually-hidden">
+					Открыть меню навигации.
+				</span>
+			</button>
+			<nav class="main-header__nav main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a class="main-nav__link {{ page == 'index' ? 'main-nav__link--current' }}" href="index.html">
+							Главная
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link {{ page == 'catalog' ? 'main-nav__link--current' }}" href="catalog.html">
+							Каталог продукции
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link {{ page == 'form' ? 'main-nav__link--current' }}" href="form.html">
+							Подбор программы
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!--Разметка секции промо-->
+
+		<main class="page__main">
+			{% block main %}
+				Страница в разработке
+			{% endblock %}
+		</main>
+
+		<!--Разметка секции с контактами и картой -->
+
+		<section class="contacts">
+			<h2 class="visually-hidden">
+				Контактные данные магазина «Кэт энерджи».
+			</h2>
+			<div class="contacts__wrapper centerer">
+				<header class="contacts__header contacts-header">
+					<p class="contacts-header__slogan">
+						Приглашаем к сотрудничеству дилеров!
+					</p>
+					<p class="contacts-header__info">
+						ул. Большая
+						<br>
+						Конюшенная, д. 19/8
+						<br>
+						Санкт-Петербург
+						<br>
+					</p>
+				</header>
+			</div>
+			<img class="contacts__image" src="img/content/location.jpg" width="320" height="362" alt="Расположение магазина «Кэт энерджи» на карте.">
+
+		</section>
+
+		<!--Разметка футера-->
+
+		<footer class="page-footer">
+			<div class="page-footer__wrapper centerer">
+				<div class="page-footer__logo">
+					<a class="page-footer__logo-text logo-text" href="index.html">
+						<img class="logo-text__image" src="img/content/logo-text-mobile.svg" width="128" height="24" alt="Текстовый логотип магазина «Кэт энерджи».">
+					</a>
+				</div>
+				<div class="page-footer__social social">
+					<ul class="social__list">
+						<li class="social__item">
+							<a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+								<span class="visually-hidden">
+									Мы в Вконтакте
+								</span>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+								<span class="visually-hidden">
+									Мы в Ютубе
+								</span>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+								<span class="visually-hidden">
+									Мы в Телеграме
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-footer__copyright copyright">
+					<a class="copyright__text-link" href="https://htmlacademy.ru/">
+						HTML Academy
+					</a>
+					<a class="copyright__logo-link" href="https://htmlacademy.ru/">
+						<img class="copyright__logo-image" src="img/content/logo-html-small.svg" width="27" height="34" alt="Логотип «HTML Academy».">
+					</a>
+				</div>
+			</div>
+
+		</footer>
+	</body>
+
+</html>
